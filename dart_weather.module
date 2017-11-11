@@ -48,7 +48,7 @@ function dart_weather_block_view($delta = '') {
 function dart_weather_contents() {
   $content = <<<EOT
   <div class='weather form-inline'>
-    <input title="Enter your ZIP code." id="zipCode" name="weatherZIP" value="" size="25" maxlength="5" class="form-text" type="text" placeholder="ZIP Code">
+    <input title="Enter your ZIP code." id="zipCode" name="weatherZIP" value="" size="25" maxlength="5" class="form-text" type="text" placeholder="ZIP Code" onkeyup="this.value=this.value.replace(/[^\d]/,'')">
     <input id="getWeatherButton" name="op" value="Get" class="form-submit" type="submit">
   </div>
   <div id='js_weatherResults'>
