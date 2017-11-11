@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * @file
+ */
+
+/**
+ * Implements hook_block_info().
+ */
+function jeff_module_block_info() {
+  $blocks['jeff_module'] = array(
+    'info' => t('Jeff Block'),
+    'cache' => DRUPAL_CACHE_PER_ROLE,
+    'region' => 'Content',
+    'visibility' => BLOCK_VISIBILITY_LISTED,
+    'pages' => 'node/*',
+  );
+  return $blocks;
+}
