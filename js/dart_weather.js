@@ -73,10 +73,18 @@
      * @return void
      */
     addListeners : function(){
-      jQuery('#getWeatherButton').on('click', function(e){
+      $('#getWeatherButton').on('click', function(e){
         var zipCode = jQuery('#zipCode').val();
         weather_js.getWeatherData(zipCode);
       });
+
+      /* Submit on return key as well */
+      $('input#zipCode').keypress(function (e) {
+        if (e.which == 13) {
+          var zipCode = jQuery('#zipCode').val();
+          weather_js.getWeatherData(zipCode);
+        }
+       });
     },
 
     /*
