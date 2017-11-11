@@ -2,5 +2,5 @@ name = Dart Weather
 description = Creates a weather info block pulling data from Yahoo Weather.
 core = 7.x
 version = 7.x-1.0
-#scripts[] = js/main.js
-#stylesheets[all][] = css/main.css
+scripts[] = js/dart_weather.js
+stylesheets[all][] = css/dart_weather.css
