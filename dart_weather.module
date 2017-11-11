@@ -2,12 +2,13 @@
 
 /**
  * @file
+ * Create the Dart Weather module.
  */
 
 /**
  * Implements hook_block_info().
  *
- * @return  associative array
+ * @return associative array
  */
 function dart_weather_block_info() {
   $blocks['dart_weather'] = array(
