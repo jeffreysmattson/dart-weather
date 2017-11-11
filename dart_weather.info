@@ -1,0 +1,5 @@
+name = Dart Weather
+description = Creates a weather block pulling data from Yahoo Weather.
+core = 7.x
+scripts[] = js/main.js
+stylesheets[all][] = css/main.css
