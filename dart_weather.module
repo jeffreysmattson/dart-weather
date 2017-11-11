@@ -6,6 +6,8 @@
 
 /**
  * Implements hook_block_info().
+ *
+ * @return  associative array
  */
 function dart_weather_block_info() {
   $blocks['dart_weather'] = array(
@@ -21,7 +23,7 @@ function dart_weather_block_info() {
 /**
  * Implements hook_block_view().
  *
- * @return block data
+ * @return array    Contents and Subject.
  */
 function dart_weather_block_view($delta = '') {
   switch ($delta) {
@@ -39,8 +41,6 @@ function dart_weather_block_view($delta = '') {
 
 /**
  * Build the weather block element structure.
- *
- * Returns html for the block.
  *
  * @return html
  */
