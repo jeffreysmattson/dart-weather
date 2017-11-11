@@ -47,16 +47,16 @@ function dart_weather_block_view($delta = '') {
  */
 function dart_weather_contents() {
   $content = <<<EOT
-  <div class='weather form-inline'>";
+  <div class='weather form-inline'>
     <input title="Enter your ZIP code." id="zipCode" name="weatherZIP" value="" size="25" maxlength="5" class="form-text" type="text" placeholder="ZIP Code">
-    <input id="getWeatherButton" name="op" value="Get" class="form-submit" type="submit">'
+    <input id="getWeatherButton" name="op" value="Get" class="form-submit" type="submit">
   </div>
   <div id='js_weatherResults'>
     <span id='js_weatherResultsTitle'></span>
     <span id='js_weatherResultsTemp'></span>
     <span id='js_weatherResultsText'></span>
     <span id='js_weatherResultsLink'></span>
-  </div>";
+  </div>
 EOT;
   return $content;
 }
