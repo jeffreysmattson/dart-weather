@@ -60,7 +60,7 @@
         },
         error: function(jqXHR, textStatus, errorThrown) {
           weather_js.clearWeatherHtml();
-          $('#js_weatherResultsTitle').html('Sorry, no results for that ZIP code.');
+          $('#js_weatherResultsTitle').html('There was a problem gathering your weather results.');
         },
         complete: function(jqXHR, textStatus){
           if(textStatus == 'success' && weather_js.results != null){
