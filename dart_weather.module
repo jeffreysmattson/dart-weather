@@ -7,13 +7,32 @@
 /**
  * Implements hook_block_info().
  */
-function jeff_module_block_info() {
-  $blocks['jeff_module'] = array(
-    'info' => t('Jeff Block'),
+function dart_weather_block_info() {
+  $blocks['dart_weather'] = array(
+    'info' => t('Dart Weather'),
     'cache' => DRUPAL_CACHE_PER_ROLE,
     'region' => 'Content',
     'visibility' => BLOCK_VISIBILITY_LISTED,
     'pages' => 'node/*',
   );
   return $blocks;
+}
+
+/**
+ * Implements hook_block_view().
+ *
+ * @return  block data
+ */
+function dart_weather_block_view($delta = '') {
+  switch ($delta) {
+    case 'dart_weather':
+      $block['subject'] = t('Get Today&#8217;s Weather');
+      if (TRUE == user_is_logged_in()) {
+        $block['content'] = dart_weather_contents();
+      }
+      else {
+        $block['content'] = 'You must be logged in to view weather.';
+      }
+  }
+  return $block;
 }
