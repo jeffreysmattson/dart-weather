@@ -40,6 +40,11 @@
 
       /* No funny business */
       zip = zip.replace(/\D/g,'');
+
+      /* If there is nothing entered. Just return */
+      if('' == zip){
+        return;
+      }
       
       var url = 'https://query.yahooapis.com/v1/public/yql?q=select%20item%20from%20weather.forecast%20where%20woeid%20in%20(select%20woeid%20from%20geo.places(1)%20where%20text=%27'+zip+'%27)&format=json';
       $.ajax({
